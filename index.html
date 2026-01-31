@@ -3,14 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Programaci&oacute;n Web - UPA I S C | I T I" />
         <title>Desarrollo Web - UPA ISC & ITI</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com/">
-        <link rel="preconnect" href="https://fonts.gstatic.com/">
+        <meta name="description" content="Programaci&oacute;n Web - UPA I. S. C. | I. T. I." />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/main.css">
-
+        <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
         <header class="header">
@@ -25,10 +24,10 @@
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="portafolio.html">Portafolio</a></li>
+                    <li><a href="portfolio.html">Portafolio</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li>
-                        <a href="#contacto" class="btn btn-contacto">Contacto</a>
+                        <a href="#contacto" class="btn btn-contact">Contacto</a>
                     </li>
                 </ul>
             </nav>
@@ -37,28 +36,24 @@
             <section id="inicio" class="hero">
                 <div class="container hero-content">
                     <h1>Soluciones digitales modernas</h1>
-                    <p>
-                        Diseñamos y desarrollamos experiencias web profesionales y escalables.
-                    </p>
+                    <p>Dise&ntilde;amos y desarrollamos experiencias web profesionales y escalables.</p>
                     <a href="#servicios" class="btn btn-primary">Ver servicios</a>
                 </div>
             </section>
-
             <section id="servicios" class="section">
                 <div class="container">
                     <header class="section-header">
-                        <h2>Nuestro Servicios</h2>
+                        <h2>Nuestros Servicios</h2>
                         <p>Soluciones pensadas para crecer contigo</p>
                     </header>
-
                     <div class="grid">
                         <article class="card">
-                            <h3>Diseño Web</h3>
-                            <p>Interfaces modernas, acceseibles y centradas en el usuario</p>
+                            <h3>Dise&ntilde;o Web</h3>
+                            <p>Interfaces modernas, accesibles y centradas en el usuario.</p>
                         </article>
                         <article class="card">
                             <h3>Desarrollo</h3>
-                            <p>Aplicaciones rapidas, seguras y escalables</p>
+                            <p>Aplicaciones r&aacute;pidas, seguras y escalables.</p>
                         </article>
                         <article class="card">
                             <h3>SEO & Performance</h3>
@@ -73,8 +68,8 @@
                         <div>
                             <h2>Sobre Nosotros</h2>
                             <p>
-                                Somos un equipo enfocado en crear productos digitales de alta calidad, 
-                                usando tecnolog&iacute;as modernas y buenas pr&aacute;cticas.
+                            Somos un equipo enfocado en crear productos digitales de alta calidad,
+                            usando tecnolog&iacute;as modernas y buenas pr&aacute;cticas.
                             </p>
                         </div>
                         <div>
@@ -83,16 +78,16 @@
                     </div>
                 </div>
             </section>
-
             <section id="contacto" class="section">
                 <div class="container">
                     <header class="section-header">
                         <h2>Contacto</h2>
                         <p>Hablemos de tu pr&oacute;ximo proyecto</p>
                     </header>
+
                     <form class="form">
                         <input type="text" placeholder="Nombre" required />
-                        <input type="email" placeholder="Correo electr&oacute;nico" required />
+                        <input type="email" placeholder="Email" required />
                         <textarea placeholder="Mensaje" rows="5" required></textarea>
                         <button type="submit" class="btn btn-primary">Enviar Informaci&oacute;n</button>
                     </form>
@@ -102,7 +97,7 @@
         <footer class="footer">
             <div class="container footer-content">
                 <p>
-                    &copy; 2026 Universidad Polit&eacute;cnica de Atlacom&uacute;lco | Nombre Completo.
+                    &copy; 2026 Universidad Polit&eacute;cnica de Atlacom&uacute;lco | Nombre Completo. 
                     Todos los derechos reservados.
                 </p>
             </div>
@@ -110,5 +105,44 @@
         <button class="scroll-top" aria-label="Volver arriba">
             &uarr;
         </button>
+        <script>
+            // Selecciona el bot&oacute;n hamburguesa
+            const toggle = document.querySelector('.nav-toggle');
+            // Selecciona el men&uacute; de navegaci&oacute;n
+            const menu = document.querySelector('.nav-menu');
+
+            // Evento click para abrir o cerrar el men&uacute;
+            toggle.addEventListener('click', () => {
+                // Agrega o quita la clase "active"
+                menu.classList.toggle('active');
+            });
+
+            // Cerrar men&uacute; al hacer click en un link (mobile UX)
+            // Cierra el men&uacute; al hacer clic en cualquier enlace
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.remove('active');
+                });
+            });
+        </script>
+        <script>
+            const scrollTopBtn = document.querySelector('.scroll-top');
+            // Mostrar u ocultar el bot&oacute;n seg&uacute;n el scroll
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollTopBtn.classList.add('show');
+                } else {
+                    scrollTopBtn.classList.remove('show');
+                }
+            });
+
+            // Volver suavemente al inicio
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        </script>
     </body>
 </html>
