@@ -1,0 +1,24 @@
+:root{
+    --color-primary: #2563EB;
+    --color-dark: #0F172A;
+    --color-light: #F8FAFC;
+    --color-gray: #64748B;
+
+    --max-width: 1200px;
+    --radius: 0.75rem;
+}
+
+*::before,
+*::after,
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    margin: 0px;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    color: var(--color-dark);
+    line-height: 1.6;
+    background-color: #FFF;
+}
