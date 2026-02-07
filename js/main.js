@@ -3,7 +3,10 @@ function enviarMensaje(){
     const correo = document.getElementById("correo").value
     const mensaje = document.getElementById("mensaje").value
 
-    console.log("Datos Ingresados: ", nombre, correo, mensaje);
+    console.log("Datos Ingresados: ", nombre, correo, mensaje)
+
+    alert("Datos:\n" + "Nombre: " + nombre + "\nCorreo: " + correo + "\nMensaje : " + mensaje)
+
     
     return false
 } 
