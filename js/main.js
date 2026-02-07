@@ -20,10 +20,15 @@ function validarDatos(elemento){
     let valor_elemento = elemento.value;
     if(valor_elemento != "" && valor_elemento != null){
         validacion = true;
+        quitarError(elemento);
     }else{
         mostrarErro(elemento);
     }
     return validacion
+}
+
+function quitarError(elemento){
+    elemento.classList.toggle('input-error');
 }
 
 function mostrarErro(elemento){
