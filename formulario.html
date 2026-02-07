@@ -46,17 +46,16 @@
             <section id="contacto" class="section">
                 <div class="container">
                     <header class="section-header">
-                        <h2>Forms</h2>
-                        <p>Datos de Registro</p>
+                        <h2>Contacto</h2>
+                        <p>Hablemos de tu pr&oacute;ximo proyecto</p>
                     </header>
-                    <div class="forms">
-                        <form class="from">
-                            <input type="text" id="" name="" placeholder="Nombre" required>
-                            <input type="text" id="" name="" placeholder="A. Paterno" required>
-                            <input type="text" id="" name="" placeholder="A. Materno" required>
-                        </form>
-                        
-                    </div>
+
+                    <form class="form">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
+                        <input type="email" id="correo" name="correo" placeholder="Email" required />
+                        <textarea placeholder="Mensaje" id="mensaje" name="mensaje" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary" onclick="return enviarMensaje()">Enviar Informaci&oacute;n</button>
+                    </form>
                 </div>
             </section>
             
