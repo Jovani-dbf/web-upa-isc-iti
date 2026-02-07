@@ -28,9 +28,9 @@ function validarDatos(elemento){
 }
 
 function quitarError(elemento){
-    elemento.classList.toggle('input-error');
+    elemento.classList.remove('input-error');
 }
 
 function mostrarErro(elemento){
-    elemento.classList.toggle('input-error');
+    elemento.classList.add('input-error');
 }
