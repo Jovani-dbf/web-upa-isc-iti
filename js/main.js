@@ -10,9 +10,9 @@ function enviarMensaje(){
     let valida_msj = validarDatos(mensaje);
 
     if(valida_nom && valida_email && valida_msj){
-        alert("Los datos se ingresaron de manera correcta.");
+        
     }else{
-        alert("Por favor, Ingrese todos los datos solicitados");
+        
     }
     
     return false
