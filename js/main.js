@@ -18,7 +18,7 @@ function enviarMensaje(){
 function validarDatos(valor){
     let validacion = false;
     
-    if(valor != "" || valor != null){
+    if(valor != "" && valor != null){
         validacion = true;
     }
 
