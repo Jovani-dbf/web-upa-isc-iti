@@ -3,10 +3,24 @@ function enviarMensaje(){
     const correo = document.getElementById("correo").value
     const mensaje = document.getElementById("mensaje").value
 
-    console.log("Datos Ingresados: ", nombre, correo, mensaje)
+    const datos_validados = validarDatos(nombre) && validarDatos(correo) && validarDatos(mensaje)
 
-    alert("Datos:\n" + "Nombre: " + nombre + "\nCorreo: " + correo + "\nMensaje : " + mensaje)
 
+    if (datos_validados == true){
+        alert("Los datos se ingresaron de manera correcta.");
+    }else{
+        alert("Por favor, Ingrese todos los datos solicitados");
+    }
     
     return false
 } 
+
+function validarDatos(valor){
+    let validacion = false;
+    
+    if(valor != "" || valor != null){
+        validacion = true;
+    }
+
+    return validacion
+}
