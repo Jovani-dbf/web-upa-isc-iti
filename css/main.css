@@ -296,3 +296,7 @@ img {
 .input-error{
     border: 1px solid #af1e5d !important;
 }
+
+.forms{
+    border: 1px solid #3d3e41;
+}
