@@ -32,5 +32,5 @@ function quitarError(elemento){
 }
 
 function mostrarErro(elemento){
-    elemento.classList.add('input-error');
+    elemento.classList.toggle('input-error');
 }
