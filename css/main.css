@@ -294,5 +294,5 @@ img {
 }
 
 .input-error{
-    border: 1px solid #af1e5d;
+    border: 1px solid #af1e5d !important;
 }
