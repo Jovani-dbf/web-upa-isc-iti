@@ -292,3 +292,7 @@ img {
     opacity: 1;
     pointer-events: auto;
 }
+
+.input-error{
+    border: 1px solid #af1e5d;
+}
