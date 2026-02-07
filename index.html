@@ -10,11 +10,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="css/main.css" />
+
+        <script src="js/main.js"></script>
+
     </head>
     <body>
         <header class="header">
             <nav class="nav container">
-                <a href="#" class="logo">UPA.</a>
+                <a href="#" class="logo">UPA</a>
                 <button class="nav-toggle" aria-label="Abrir men&uacute;">
                     <span></span>
                     <span></span>
@@ -86,10 +89,10 @@
                     </header>
 
                     <form class="form">
-                        <input type="text" placeholder="Nombre" required />
-                        <input type="email" placeholder="Email" required />
-                        <textarea placeholder="Mensaje" rows="5" required></textarea>
-                        <button type="submit" class="btn btn-primary">Enviar Informaci&oacute;n</button>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
+                        <input type="email" id="correo" name="correo" placeholder="Email" required />
+                        <textarea placeholder="Mensaje" id="mensaje" name="mensaje" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary" onclick="return enviarMensaje()">Enviar Informaci&oacute;n</button>
                     </form>
                 </div>
             </section>
@@ -124,7 +127,7 @@
                     menu.classList.remove('active');
                 });
             });
-        </script>
+        </scrip>
         <script>
             const scrollTopBtn = document.querySelector('.scroll-top');
             // Mostrar u ocultar el bot&oacute;n seg&uacute;n el scroll
