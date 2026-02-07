@@ -1,7 +1,7 @@
 function enviarMensaje(){
-    const nombre = document.getElementById("nombre").value
-    const correo = document.getElementById("correo").value
-    const mensaje = document.getElementById("mensaje").value
+    const nombre = document.getElementById("nombre")
+    const correo = document.getElementById("correo")
+    const mensaje = document.getElementById("mensaje")
 
     const datos_validados = validarDatos(nombre) && validarDatos(correo) && validarDatos(mensaje)
 
@@ -15,12 +15,17 @@ function enviarMensaje(){
     return false
 } 
 
-function validarDatos(valor){
+function validarDatos(elemento){
     let validacion = false;
-    
-    if(valor != "" && valor != null){
+    let valor_elemento = elemento.value;
+    if(valor_elemento != "" && valor_elemento != null){
         validacion = true;
+    }else{
+        mostrarErro(elemento);
     }
-
     return validacion
+}
+
+function mostrarErro(elemento){
+    elemento.classList.add('input-error');
 }
